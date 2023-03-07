@@ -1,0 +1,21 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "position-values": map-merge(
+      map-get($utilities, "position-values"),
+      ( 0: 0,
+      10: 10%,
+      20: 20%,
+      30: 30%,
+      50: 50%,
+      100: 100% ),
+    ),
+);
+
+@import "bootstrap/scss/utilities/api";
